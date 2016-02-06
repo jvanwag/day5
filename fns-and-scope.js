@@ -4,14 +4,12 @@
 var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
-
-var name = 'Tyler';
 function isTyler(name) {
   if (name === 'Tyler') {
-    return 'true';
+    return true;
   }
   else {
-    return "false";
+    return false;
   }
 }
   //Code Here
@@ -45,10 +43,10 @@ console.log(welcome());  //Code Here
 //Next problem
 
 
-
-
-parameters are the variable that sometimes defines what you put in the parenthasis,
-the argument is what you put in as the parameter when running the function.//What is the difference between arguments and parameters?
+//
+//
+// parameters are the variable that sometimes defines what you put in the parenthasis,
+// the argument is what you put in as the parameter when running the function.//What is the difference between arguments and parameters?
 
   //Answer Here
 
@@ -60,7 +58,7 @@ the argument is what you put in as the parameter when running the function.//Wha
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-false,0,'', null, undefined,NaN.  You can check if something is falsy by using an if statement and setting it = true. //Answer Here
+// Jfalse,0,'', null, undefined,NaN.  You can check if something is falsy by using an if statement and setting it = true. //Answer Here
 
 
 
@@ -69,7 +67,7 @@ false,0,'', null, undefined,NaN.  You can check if something is falsy by using a
 
 
 function myName() {
-  return "Jon Van Wagenen"
+  return "Jon"
 }//Create a function called myName that returns your name
 
   //Code Here
@@ -78,8 +76,9 @@ function myName() {
 
 //Now save the function definition of myName into a new variable called newMyName
 
-var newMyName = myName()  ; //Code Here
-alert(newMyName);
+var newMyName = myName; //Code Here
+alert(newMyName());
+
 //Now alert the result of invoking newMyName
 
 
@@ -91,14 +90,13 @@ alert(newMyName);
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
 function outerFn() {
-  function anonymous() {
+  return function() {
     return "Jon Van Wagenen";
   }
-  return anonymous();
 }  //Code Here
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
 var innerFn = outerFn();  //Code Here
 
-console.log(innerFn)//Now invoke innerFn.
+innerFn();//Now invoke innerFn.
